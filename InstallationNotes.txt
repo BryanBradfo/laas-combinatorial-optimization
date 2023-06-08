@@ -1,0 +1,28 @@
+
+Installation notes 
+
+Installer Python - https://www.python.org/ ou https://www.anaconda.com/
+
+Vous pouvez utiliser Anaconda si vous êtes plus à l'aise avec.
+Vous pouvez avoir plusieurs version de Python sur votre machine :
+Sur Windows, installer les versions, puis utiliser py -3.x pour lancer Python 3.x.
+Sur Linux, utiliser python3.x directement.
+Il est fortement conseillé d'utiliser un environnement virtuel pour le développement, à vous de choisir celui que vous préférer (conda, venv, virtualenv, ...).
+Installer Jupyter : pip install jupyter (dans votre environnement).
+Installer MinILP : pip install git+https://github.com/Holt59/minilp (dans votre environnement).
+
+
+CPLEX
+Installer CPLEX (12.9 ou 12.10) :
+Pour télécharger CPLEX : https://www.ibm.com/academic/technology/data-science.
+Les TPs ont été testés avec CPLEX 12.9, préférer la 12.9 si elle est disponible.
+Installer les modules Python de CPLEX :
+Dans un terminal :
+cd $CPLEX_INSTALL/python  # Remplacer par le chemin.
+python setup.py install 
+ou 
+python setup.py install --user 
+
+Il faut mettre à jour la variable os.environ['PATH'] dans le fichier config/__init__.py
+
+Si docplex n'est pas reconnu, vous pouvez changer le kernel de python utilisé dans pupyter  ou l'installer avec pip 
